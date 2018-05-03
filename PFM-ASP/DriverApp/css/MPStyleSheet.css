@@ -1,0 +1,45 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+    margin:0;
+    background: #1b78a7;
+    color: #fff;
+    text-align: center;
+}
+
+#PT{
+    background-color: #104058;
+    margin: 0;
+    padding: 12px;
+    color: #fff;
+}
+
+Select {
+    margin: 0px auto;
+    width: 70%;
+    background-color: #dcf1ff;
+    border: 0;
+    border-radius: 15px;
+    color: #004f82;
+    font-weight: 500;
+    padding: 10px;
+}
+
+input{
+    margin:15px;
+    width: 69%;
+    background-color: #dcf1ff;
+    border: 0;
+    border-radius: 15px;
+    color: #004f82;
+    font-weight: 500;
+    padding: 12px;
+}
+
+input:hover{
+    color: #dcf1ff;
+    background-color: #004f82;
+}
+
+.Control{
+    margin:10px;
+}

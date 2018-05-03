@@ -1,0 +1,66 @@
+﻿body {
+    background-image: url('../Pics/Bus-BG.png');
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+body {
+  /*background-color:#fff;*/
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+}
+
+#Btn{
+    background-color: #167fc3;
+    border: 0;
+    border-radius: 15px;
+    color:#fff;
+    font-weight:500;
+    padding:12px;
+}
+#Btn:hover{
+    background-color: #56abdb;
+}
+
+#Box{
+    text-align:center; 
+    position:center; 
+    width:40%; 
+    height:40%; 
+    margin:30% auto; 
+    padding:2%; 
+    background-color:rgba(10,10,10,0.5);
+    border-radius: 15px;
+}
+
+.form-login {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
+
+
+}
+
+h4 { 
+    color:white;
+    border:0 solid #fff; 
+    border-bottom-width:1px;
+    padding-bottom:10px;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 15px;
+}
+
+.wrapper {
+    text-align: center;
+    border-radius: 15px;
+}

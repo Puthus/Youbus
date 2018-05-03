@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MP_CompwsHome.master.cs" Inherits="MP_CompwsHome" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/png" href="Pics/YouBusLogo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/bootstrap.js"></script>
+    <link href="css/MPStyleSheet.css" rel="stylesheet" />
+    <script src="js/MPJavaScript.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="wrapper">
+                <!-- Sidebar Holder -->
+                <nav id="sidebar">
+                    <div class="sidebar-header" id="sidebarCollapse">
+                        <h3>
+                            <img src="Pics/YouBusLogoName.png" style="width: 200px" /></h3>
+                        <strong>
+                            <img src="Pics/YouBusLogo.png" style="width: 50px" /></strong>
+                    </div>
+
+                    <ul class="list-unstyled components" style="border-bottom: solid 1px white">
+                        <li class="active">
+                            <a href="<%= Page.ResolveUrl("~/Default.aspx") %>"><i class="glyphicon glyphicon-home"></i>Home</a>
+                        </li>
+                        <li>
+                            <a href="<%= Page.ResolveUrl("~/PgLines.aspx") %>"><i class="glyphicon glyphicon-road"></i>Lines</a>
+                        </li>
+                        <li>
+                            <a href="<%= Page.ResolveUrl("~/PgBuses.aspx") %>"><i class="fa fa-bus"></i>Buses</a>
+                        </li>
+                        <li>
+                            <a href="<%= Page.ResolveUrl("~/PgStops.aspx") %>"><i class="glyphicon glyphicon-modal-window"></i>Stops</a>
+                        </li>
+                        <li>
+                            <a href="<%= Page.ResolveUrl("~/PgAccounts.aspx") %>"><i class="fa fa-address-book"></i>Accounts</a>
+                        </li>
+                        <li style="border-top: solid 1px white">
+                            <a href="<%= Page.ResolveUrl("~/PgMailBox.aspx") %>"><i class="glyphicon glyphicon-envelope"></i>Mailbox</a>
+                        </li>
+                        <li>
+                            <a href="<%= Page.ResolveUrl("~/Settings.aspx") %>"><i class="glyphicon glyphicon-cog"></i>Settings</a>
+                        </li>
+                    </ul>
+
+                </nav>
+
+                <!-- Page Content Holder -->
+
+                <div id="content">
+
+                    <div class="topnav" id="Topnav">
+                        <a href="<%= Page.ResolveUrl("~/LogIn.aspx") %>"><i class="glyphicon glyphicon-log-out"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-bell"></i><span class="badge">
+                            <asp:Label ID="LbNotifNbr" runat="server" Text="0"></asp:Label></span></a>
+                        <a href="#" style="border-right: 1px solid #6b55ba; border-left: 1px solid #6b55ba; padding: 10px">
+                            <!-- Takes you to the user account page ?! -->
+                            <asp:Label ID="Label1" runat="server" Text="User Name" Style="font-size: smaller;"></asp:Label>
+                            <img src="Pics/profilepic.jpg" id="ProfilePic" />
+                        </a>
+                        <a href="javascript:void(0);" style="font-size: 15px;" class="icon" onclick="Function()">&#9776;</a>
+                    </div>
+
+
+                    <asp:ContentPlaceHolder ID="PageContent" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
