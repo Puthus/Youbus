@@ -17,11 +17,12 @@ namespace DriverApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Cnx = new SqlConnection("Data Source = DESKTOP-TSI04DE\\SQLEXPRESS; Initial Catalog = LocBus; Integrated Security = True");
-            Cmd = new SqlCommand("Select B_Matricule from Bus B join Account A on B.B_Account = A.id");
+            Cnx = new SqlConnection(@"Data Source=DESKTOP-NERR214\SQLEXPRESS;Initial Catalog=Youbus;Integrated Security=True");
+            Cmd = new SqlCommand("Select B_Matricule from Bus B join Account A on B.B_Account = A.Id_Account");
             try
             {
                 Cnx.Open();
+                Cmd.Connection = Cnx;
                 DR = Cmd.ExecuteReader();
                 BusMat = DR.GetString(0);
                 PT.Text = "NumMat :" + BusMat;
@@ -29,20 +30,27 @@ namespace DriverApp
             catch (Exception ex)
             {
                 PT.ForeColor = System.Drawing.Color.IndianRed;
-                PT.Text = ex.Message;
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + ex.Message + "');", true);
+                // PT.Text = ex.Message;
             }
             finally
             {
                 Cnx.Close();
             }
-
-            
         }
 
         protected void Bnt_Click(object sender, EventArgs e)
         {
-            Cmd.CommandText = ("Insert into Msg values ('Alert',"+ BusMat + ",'Admin','" + TextBox2.Text + "')");
-
+            // Cmd.CommandText = ("Insert into Msg values ('Alert'," + BusMat + ",'Admin','" + TextBox2.Text + "')");
+            try
+            {
+                int x;
+                x = Int32.Parse("test");
+            }
+            catch (Exception ex)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + ex.Message + "');", true);
+            }
         }
     }
 }

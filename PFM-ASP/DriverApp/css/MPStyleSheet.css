@@ -14,7 +14,7 @@
 }
 
 Select {
-    margin: 0px auto;
+    margin: 0 auto;
     width: 70%;
     background-color: #dcf1ff;
     border: 0;
@@ -42,4 +42,8 @@ input:hover{
 
 .Control{
     margin:10px;
+}
+
+#myModal {
+    color: #000;
 }
