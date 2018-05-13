@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,6 +67,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="js\jquery-3.3.1.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\popper.js" />
     <Content Include="packages.config" />
     <Content Include="css\bootstrap-grid.css.map" />
     <Content Include="css\bootstrap-grid.min.css.map" />
@@ -90,7 +95,6 @@
     <Content Include="css\bootstrap-reboot.css" />
     <Content Include="css\bootstrap-reboot.min.css" />
     <Content Include="css\bootstrap.css" />
-    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\LogPage.css" />
     <Content Include="css\MPStyleSheet.css" />
     <Content Include="js\bootstrap.bundle.js" />
